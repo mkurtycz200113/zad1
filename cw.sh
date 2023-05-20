@@ -14,3 +14,12 @@ elif [ "$1" == "--logs" ]; then
       echo "Data: $(date)" >> log$i.txt
     done
   fi
+elif [ "$1" == "--help" ]; then
+  echo "Dostępne opcje:"
+  echo "--date - wyświetla dzisiejszą datę"
+  echo "--logs - tworzy automatycznie 100 plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie"
+  echo "--logs 30 - tworzy automatycznie 30 plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie"
+  echo "--help - wyświetla wszystkie dostępne opcje"
+else
+  echo "Nieznana opcja. Wpisz '$0 --help' w celu uzyskania listy dostępnych opcji."
+fi
