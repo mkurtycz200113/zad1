@@ -1,6 +1,6 @@
 if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
   echo $(date)
-elif [ "$1" == "--logs" ]; then
+elif [ "$1" == "--logs" ] || [ "$1" == "-l" ]; then
   if [ -n "30" ]; then
     for ((i=1; i<=30; i++)); do
       echo "log$i.txt" > log$i.txt
