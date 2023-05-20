@@ -1,4 +1,4 @@
-if [ "$1" == "--date" ]; then
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
   echo $(date)
 elif [ "$1" == "--logs" ]; then
   if [ -n "30" ]; then
@@ -19,7 +19,7 @@ elif [ "$1" == "--help" ]; then
   echo "--date - wyświetla dzisiejszą datę"
   echo "--logs - tworzy automatycznie 100 plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie"
   echo "--logs 30 - tworzy automatycznie 30 plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie"
-  echo "--help - wyświetla wszystkie dostępne opcje"
+  echo "-h --help - wyświetla wszystkie dostępne opcje"
 else
   echo "Nieznana opcja. Wpisz '$0 --help' w celu uzyskania listy dostępnych opcji."
 fi
